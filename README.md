@@ -91,7 +91,7 @@ This repository includes `.github/ISSUE_TEMPLATE/authoring-improvement.yml` for 
 | Rules / Instructions | `.github/instructions/`, `.cursor/rules/`, `.claude/rules/` | Automatically injected context rules |
 | Prompts / Commands | `.github/prompts/`, `.claude/commands/` | Reusable slash commands or task templates |
 | Chat Modes | `.github/chatmodes/` | Special-purpose chat modes |
-| Skills | `.github/skills/<name>/SKILL.md` | Procedural workflows with bundled assets |
+| Skills | `.github/skills/<name>/SKILL.md`, `.claude/skills/<name>/SKILL.md`, `.agents/skills/<name>/SKILL.md` | Procedural workflows with bundled assets |
 | Hooks | `.github/hooks/`, `.claude/hooks/` | Lifecycle checks or transformations |
 | Agents | `.github/agents/`, `.claude/agents/` | Specialized subagents |
 | MCP / Tools | `.vscode/mcp.json`, `.mcp.json` | External docs, browser, APIs, build/test tools |

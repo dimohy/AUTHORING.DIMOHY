@@ -304,7 +304,7 @@ model: "Claude Sonnet 4"
 ### 6.1 목적
 - 특정 절차적 노하우(예: "Rust 프로젝트에 릴리즈 태그 찍기", "SPV 셰이더 재컴파일")를 **단계별 재현 가능 스킬**로 문서화.
 
-스킬은 기본적으로 **디렉터리 단위 자산 번들**이다. 정규 파일명은 `SKILL.md` 이며, 권장 경로는 `.github/skills/<skill-name>/SKILL.md` 다. 도구별로 `.claude/skills/<skill-name>/SKILL.md`, `.agents/skills/<skill-name>/SKILL.md`, `.antigravity/skills/<skill-name>/SKILL.md` 등으로 매핑할 수 있다.
+스킬은 기본적으로 **디렉터리 단위 자산 번들**이다. 정규 파일명은 `SKILL.md` 이며, 활성 에이전트 프레임워크의 기본 위치로 매핑한다. 대표 경로는 `.github/skills/<skill-name>/SKILL.md`, `.claude/skills/<skill-name>/SKILL.md`, `.agents/skills/<skill-name>/SKILL.md`, `.antigravity/skills/<skill-name>/SKILL.md` 등이다.
 
 ### 6.2 형식
 ```markdown
@@ -333,7 +333,7 @@ trigger: "사용자가 '릴리즈 태그' 또는 '버전 태그'를 언급할 �
 - **파일명·디렉터리 규약**: 단일 파일 `foo.skill.md` 보다는 `<skill-name>/SKILL.md` 구조를 우선한다. 보조 스크립트·템플릿·예제는 같은 스킬 디렉터리 아래에 둔다.
 - **실패 모드**와 **사용자 확인 지점**을 명시.
 - 민감/파괴적 동작은 반드시 승인 절차 포함.
-- **환경 전제 명시 의무**: 프런트매터 바로 아래 또는 `## 사전 조건` 섹션에 **이 스킬이 어떤 AI 에이전트 프레임워크(Copilot/Claude Code/Antigravity 등)에서 어떻게 활성화되는지** 1줄 도구 전제를 적는다. 공통 컨벤션이면 "3개 프레임워크 공통", 특정 도구 한정이면 "X만 지원" 명시. 이 항목이 빠지면 실행환경이 다른 독자·사용자가 "내 PC에서 돌아?" 는 의심으로 신뢰가 무너진다.
+- **환경 전제 명시 의무**: 프런트매터 바로 아래 또는 `## 사전 조건` 섹션에 **이 스킬이 어떤 AI 에이전트 프레임워크(Copilot/Claude Code/Antigravity 등)에서 어떻게 활성화되는지**, 어떤 경로가 권위 원본인지 1줄 도구 전제를 적는다. 공통 컨벤션이면 "3개 프레임워크 공통", 특정 도구 한정이면 "X만 지원" 명시. 이 항목이 빠지면 실행환경이 다른 독자·사용자가 "내 PC에서 돌아?" 는 의심으로 신뢰가 무너진다.
 
 ### 6.4 도메인별 스킬 카테고리 예시
 

@@ -97,7 +97,7 @@ AUTHORING.DIMOHY는 어떤 프로젝트든 AI 에이전트 커스터마이징 �
 | Rules / Instructions | `.github/instructions/`, `.cursor/rules/`, `.claude/rules/` | 파일/도구 범위 자동 지침 |
 | Prompts / Commands | `.github/prompts/`, `.claude/commands/` | 재사용 가능한 슬래시 커맨드 |
 | Chat Modes | `.github/chatmodes/` | 특수 작업 모드 |
-| Skills | `.github/skills/<name>/SKILL.md` | 단계별 절차와 자산 번들 |
+| Skills | `.github/skills/<name>/SKILL.md`, `.claude/skills/<name>/SKILL.md`, `.agents/skills/<name>/SKILL.md` | 단계별 절차와 자산 번들 |
 | Hooks | `.github/hooks/`, `.claude/hooks/` | 도구 사용 전후 자동 검사/변환 |
 | Agents | `.github/agents/`, `.claude/agents/` | 특화 서브에이전트 |
 | MCP / Tools | `.vscode/mcp.json`, `.mcp.json` | 외부 도구·문서·브라우저·API 연동 |

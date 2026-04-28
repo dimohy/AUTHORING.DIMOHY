@@ -181,10 +181,12 @@ Principles:
 
 ## 6. Skills
 
-A skill is a reusable procedural workflow. Prefer a directory bundle:
+A skill is a reusable procedural workflow. Prefer a directory bundle and map it to the active agent framework’s native location:
 
 ```text
 .github/skills/<skill-name>/SKILL.md
+.claude/skills/<skill-name>/SKILL.md
+.agents/skills/<skill-name>/SKILL.md
 ```
 
 Principles:
@@ -192,7 +194,7 @@ Principles:
 - Include numbered steps.
 - Include prerequisites, failure modes, and user confirmation points.
 - Keep destructive or sensitive actions behind explicit approval.
-- State which agent framework supports the skill and how it is activated.
+- State which agent framework supports the skill, which path is authoritative, and how it is activated.
 - Put helper scripts, templates, and examples next to `SKILL.md` in the same directory.
 
 Example categories:
