@@ -1,0 +1,75 @@
+name: AUTHORING improvement
+description: Suggest a reusable improvement for AUTHORING.DIMOHY through an Issue.
+title: "[AUTHORING Improvement]: "
+labels:
+  - authoring-improvement
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve AUTHORING.DIMOHY. Use this form for improvements that may be useful beyond a single project.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Usage context
+      description: Where and how were you using AUTHORING.DIMOHY when you found this improvement?
+      placeholder: "I copied the latest Korean guide into my project and asked an agent to create AGENTS.md..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or gap
+      description: What was missing, confusing, risky, or repetitive?
+      placeholder: "The contribution flow was unclear about how ordinary users should submit reusable suggestions..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: What should AUTHORING.DIMOHY add, remove, or clarify?
+      placeholder: "Clarify that reusable AUTHORING improvements are submitted through Issues."
+    validations:
+      required: true
+
+  - type: textarea
+    id: general-value
+    attributes:
+      label: Why this is generally useful
+      description: Explain why this should be part of AUTHORING.DIMOHY rather than only your project.
+      placeholder: "This helps all external users submit reusable improvements with less friction."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected-area
+    attributes:
+      label: Affected area
+      options:
+        - label: README / onboarding
+        - label: AUTHORING guide behavior or policy
+        - label: AGENTS.md / operating constitution guidance
+        - label: SPECS.md / project-specific guidance
+        - label: Prompts / commands
+        - label: Skills / agents / hooks
+        - label: TaskSync / ask_user behavior
+        - label: Revision and localization policy
+        - label: Other
+
+  - type: textarea
+    id: suggested-text
+    attributes:
+      label: Suggested text or patch (optional)
+      description: Paste a concrete wording suggestion or diff if you have one.
+      render: markdown
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References (optional)
+      description: Add links to related issues, docs, or examples.

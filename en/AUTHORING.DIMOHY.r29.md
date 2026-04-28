@@ -1,9 +1,9 @@
-# AUTHORING.DIMOHY.r27.md — Agent Customization Authoring Guide
+# AUTHORING.DIMOHY.r29.md — Agent Customization Authoring Guide
 
 | Item | Value |
 |---|---|
 | **Author** | DIMOHY |
-| **Revision** | r27 |
+| **Revision** | r29 |
 | **Last updated** | 2026-04-28 |
 | **License** | Apache License 2.0 — see the repository [`LICENSE`](../LICENSE) file |
 | **Canonical repository** | <https://github.com/dimohy/AUTHORING.DIMOHY> |
@@ -14,8 +14,8 @@
 
 - The canonical source for this guide is <https://github.com/dimohy/AUTHORING.DIMOHY>.
 - The repository stores localized editions under `ko/` and `en/`. Whenever authoring rules or behavior change, update both language files in the same revision.
-- The root `README.md` is the repository’s default entry point and must be **English-first**. Korean guidance lives in `ko/README.md`; the root README must link to both `ko/README.md` and the Korean guide (`ko/AUTHORING.DIMOHY.r{revision}.md`).
-- `README.md` and `ko/README.md` are user-facing entry points. Keep them friendly and current: latest revision, language links, copy/install steps, and tag information.
+- The root `README.md` is the repository’s default entry point and must be **English-first**. Korean guidance lives in `ko/README.md`; the root README must link to `ko/README.md` and the Korean source directory (`ko/`).
+- `README.md` and `ko/README.md` are user-facing entry points. Keep them friendly and current: language directory links, copy/install steps, and tag information.
 - The root `README.md` should include the English visual SVG overview (`assets/authoring-workflow.svg`) so readers can understand the workflow at a glance. Korean `ko/README.md` should use the Korean SVG (`assets/authoring-workflow-ko.svg`) so each README’s visual text matches its language.
 - After updating the guide, sync the `main` branch and the revision tag (`r{revision}`) to the canonical repository whenever credentials allow it. If pushing fails, report the reason and the exact follow-up needed.
 - If Korean and English editions drift, treat it as a release-blocking defect. Fix both before declaring the revision complete.
@@ -46,6 +46,7 @@ This guide is **not loaded automatically** during normal coding or writing work.
 | Interactive bootstrap | `Run AUTHORING` / `Execute AUTHORING.DIMOHY.md` | Runs a four-step interview: purpose → structure → detailed specs → generate files. |
 | Existing project realignment | `realign`, `clean up`, `make this match AUTHORING` | Audits existing customization files, proposes changes, applies approved updates. |
 | Customization authoring | `create an instruction`, `add a prompt`, `organize skills` | Writes the requested asset using the relevant section of this guide. |
+| Upstream AUTHORING improvement | `this AUTHORING improvement is useful upstream`, `create an AUTHORING improvement issue` | Lets the user choose local-only use, local AUTHORING update, upstream Issue creation, Issue draft preparation, or skip/later. |
 
 ### Tool-specific notes
 
@@ -254,6 +255,28 @@ When asked to create or update customization assets:
 5. Update related references and checklists.
 6. Report results to the user.
 
+### 9.1 Upstream AUTHORING improvement option
+
+When an agent using this guide in another workspace discovers an improvement that appears reusable for AUTHORING.DIMOHY itself, it must **ask the user to choose** before modifying `AUTHORING.DIMOHY*.md` or preparing any GitHub request.
+
+Most users will consume this guide by fetching or copying the latest localized file from the web into their own project repository. That is enough for local use. The upstream path for ordinary external users is an **Issue**. Agents should either create an approved upstream Issue when authenticated tooling is available or prepare an Issue draft for manual submission.
+
+Offer at least these choices, using numbered text if the `ask_user` schema has no structured options:
+
+1. **Use only / no upstream** — keep the improvement only in the current project’s `AGENTS.md`, `SPECS.md`, prompts, skills, or other local customization files.
+2. **Update local AUTHORING copy** — modify the workspace’s copied `AUTHORING.DIMOHY*.md`, but do not prepare an upstream request.
+3. **Create upstream Issue** — create an Issue in <https://github.com/dimohy/AUTHORING.DIMOHY> when authenticated GitHub tooling or browser automation is available.
+4. **Prepare Issue draft** — generate an Issue title/body for manual submission when authentication or browser automation is unavailable.
+5. **Skip / later** — record nothing unless the user asks again.
+
+Rules:
+
+- Apply only the scope selected by the user. Do not silently convert a local project improvement into an upstream AUTHORING change.
+- For Issue creation, include usage context, problem/gap, proposed improvement, why it is generally useful, affected area, and optional suggested text or patch.
+- Do not create an Issue automatically without explicit user approval. If authentication is unavailable, prepare the Issue draft for manual submission.
+- Do not create, comment on, label, or close an Issue without explicit user approval and available credentials.
+- In this canonical repository, maintainers may use `.github/prompts/triage-authoring-issues.prompt.md` to read registered Issues, judge whether they are generally useful, and apply accepted changes to AUTHORING.DIMOHY.
+
 ## 10. Initial loading rules
 
 - `AGENTS.md` should only link to this guide and state when to read it.
@@ -338,6 +361,7 @@ If any gate fails, the stage is not complete.
 | `Run AUTHORING` | Interactive bootstrap |
 | `realign`, `clean up`, `audit customization files` | Existing project realignment |
 | `# ...` | Policy extension and routing to `AGENTS.md` or `SPECS.md` |
+| `propose this AUTHORING improvement upstream`, `create an AUTHORING improvement issue` | Upstream AUTHORING improvement option |
 | `AUTHORING audit`, `is this file enough?` | Self-audit |
 | Revision bump | Rename metadata/files, update both languages, README, tags |
 
@@ -378,13 +402,15 @@ External facts about tools, API signatures, paths, command names, and versions s
 
 - Use simple monotonically increasing revisions: `r1`, `r2`, `r3`, ... . The `r` prefix is part of the identifier.
 - Store localized files under `ko/` and `en/` with matching revision numbers.
+- Keep the current revision number out of README and body references whenever possible. The current revision should normally appear only in the localized AUTHORING file title, top metadata table, revisioned filename, and revision history entries. Elsewhere, use language directory links (`en/`, `ko/`) or generic selectors such as `AUTHORING.DIMOHY.r*.md`.
 - On every revision bump:
-  1. Update both metadata tables.
+  1. Update both localized document titles and top metadata tables.
   2. Rename both localized files.
-  3. Update the English-first root `README.md`, Korean `ko/README.md`, SVG overview assets, and all README links.
-  4. Update internal references.
-  5. Commit and tag `r{revision}`.
-  6. Push `main` and the tag to <https://github.com/dimohy/AUTHORING.DIMOHY> when credentials allow it.
+  3. Update README or internal references only when their structure or wording changes; do not change them just to replace the current revision number.
+  4. Replace exact revision references only when they intentionally point to the latest file instead of a historical revision.
+  5. Update the bilingual revision history documents with matching structure and user-visible changes.
+  6. Commit and tag `r{revision}`.
+  7. Push `main` and the tag to <https://github.com/dimohy/AUTHORING.DIMOHY> when credentials allow it.
 - Keep only the latest revision in each language directory unless the user explicitly asks to archive old revisions.
 - If symlinks are useful in a target project, `AUTHORING.DIMOHY.md` may point to the selected language/revision file.
 

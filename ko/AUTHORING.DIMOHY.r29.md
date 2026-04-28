@@ -1,9 +1,9 @@
-# AUTHORING.DIMOHY.r27.md — 에이전트 커스터마이징 문서 작성 가이드
+# AUTHORING.DIMOHY.r29.md — 에이전트 커스터마이징 문서 작성 가이드
 
 | 항목 | 값 |
 |---|---|
 | **저자(Author)** | DIMOHY |
-| **리비전(Revision)** | r27 |
+| **리비전(Revision)** | r29 |
 | **최종 수정일** | 2026-04-28 |
 | **라이선스** | Apache License 2.0 (본 문서 말미 [부록 A](#부록-a-license-apache-license-20) 참조) |
 | **정식 저장소** | <https://github.com/dimohy/AUTHORING.DIMOHY> — 본 문서의 권위 있는 배포·동기화 위치 |
@@ -14,8 +14,8 @@
 
 - 본 문서의 정식 관리 위치는 <https://github.com/dimohy/AUTHORING.DIMOHY> 이다. 다른 프로젝트에 복사된 파일은 사용 편의를 위한 배포본이며, 원본 개정은 이 저장소에 동기화되어야 한다.
 - 저장소 구조는 `ko/`(한국어)와 `en/`(English) 두 언어 디렉터리를 사용한다. 리비전이 올라가거나 작성 규칙이 바뀌면 **두 언어 파일을 같은 리비전으로 동시에 갱신**한다.
-- 루트 `README.md` 는 저장소 기본 안내서이므로 **English-first** 로 작성한다. 한국어 안내는 `ko/README.md` 에 두고, 루트 `README.md` 상단에서 `ko/README.md` 와 한국어 본문(`ko/AUTHORING.DIMOHY.r{revision}.md`)으로 이동할 수 있게 링크한다.
-- `README.md` 와 `ko/README.md` 는 사용자가 가장 먼저 읽는 안내서다. 부트스트랩 방법, 언어별 파일 선택, 대상 프로젝트에 복사하는 방법, 리비전/태그 확인 방법을 친절히 유지한다.
+- 루트 `README.md` 는 저장소 기본 안내서이므로 **English-first** 로 작성한다. 한국어 안내는 `ko/README.md` 에 두고, 루트 `README.md` 상단에서 `ko/README.md` 와 한국어 소스 디렉터리(`ko/`)로 이동할 수 있게 링크한다.
+- `README.md` 와 `ko/README.md` 는 사용자가 가장 먼저 읽는 안내서다. 부트스트랩 방법, 언어별 디렉터리 선택, 대상 프로젝트에 복사하는 방법, 태그 확인 방법을 친절히 유지한다.
 - 루트 `README.md` 는 저장소 구조를 한눈에 보여주는 영문 SVG 개요 다이어그램(`assets/authoring-workflow.svg`)을 포함한다. 한국어 `ko/README.md` 는 한국어 SVG(`assets/authoring-workflow-ko.svg`)를 사용해 본문 언어와 시각 자료 언어를 일치시킨다.
 - 문서 업데이트 후에는 가능하면 같은 턴에서 `main` 브랜치와 리비전 태그(`r{revision}`)를 정식 저장소에 푸시한다. 인증·권한 문제로 푸시할 수 없으면 실패 이유와 사용자가 실행할 후속 절차를 명확히 보고한다.
 - 리비전 상승 시에는 §18.4에 따라 한국어/영어 파일명·메타 테이블·README 링크·Git 태그를 모두 함께 갱신한다.
@@ -41,6 +41,7 @@
 | **1b. 신규 프로젝트 부트스트랩 (대화형 4단계)** | `#AUTHORING.DIMOHY.md 를 실행해` / `AUTHORING 실행해줘` | §11.5 절차에 따라 ①목적 파악 → ②구조 제안·확인 → ③SPECS 상세 인터뷰 → ④"완료" 시 AGENTS·SPECS·에이전트·스킬·프롬프트 일괄 생성 |
 | **2. 기존 프로젝트 재조정** | `정비해줘` / `재조정해줘` / `AUTHORING 기준으로 맞춰줘` | §12 절차에 따라 `.github/` · `AGENTS.md` · `SPECS.md` 감사 → 변경 제안표 → 승인 → 적용 |
 | **3. 문서 작성·수정** | `인스트럭션 만들어줘` / `프롬프트 추가해줘` / `스킬 정리해줘` 등 | 에이전트가 본 문서의 해당 섹션(§3~§8) 형식·원칙을 따라 작성 |
+| **4. AUTHORING 업스트림 개선 제안** | `이 AUTHORING 개선을 이슈로 제안해줘` / `이 개선은 공통으로 유용해` | 사용자가 로컬 유지·로컬 AUTHORING 수정·업스트림 Issue 생성·Issue 초안 준비·나중에 하기 중 선택하게 한 뒤 승인된 범위만 수행 |
 
 세 시나리오 모두 에이전트는 **본 문서를 먼저 읽고** 규칙을 최신 기준으로 적용해야 합니다.
 
@@ -283,14 +284,14 @@ description: "Git 커밋 메시지 자동 생성"
 ### 5.2 형식
 ```markdown
 ---
-description: "Pull Request 리뷰어 모드"
+description: "코드 리뷰어 모드"
 tools: ["codebase", "githubRepo"]
 model: "Claude Sonnet 4"
 ---
 
-# PR Reviewer
+# Code Reviewer
 
-당신은 엄격한 PR 리뷰어입니다. 보안·성능·가독성을 이 순서로 점검합니다.
+당신은 엄격한 코드 리뷰어입니다. 보안·성능·가독성을 이 순서로 점검합니다.
 ...
 ```
 
@@ -467,6 +468,28 @@ forbiddenTools: ["run_in_terminal", "replace_string_in_file"]
 4. `AGENTS.md`와의 **충돌 검사**: 운영 규칙을 약화시키지 않는지 확인.
 5. 변경을 반영한 뒤, 필요한 경우 `AGENTS.md` 섹션 5 정책 확장 규칙에 따라 체크리스트/참조를 갱신한다.
 6. `ask_user`로 결과를 보고한다.
+
+### 9.1 AUTHORING 업스트림 개선 선택 옵션
+
+다른 워크스페이스에서 본 가이드를 사용하던 중 AUTHORING.DIMOHY 자체에도 재사용 가능한 개선점이 발견되면, 에이전트는 `AUTHORING.DIMOHY*.md` 를 수정하거나 GitHub 요청을 준비하기 전에 반드시 **사용자가 범위를 선택하게** 한다.
+
+대부분의 사용자는 웹에서 최신 언어별 파일을 가져오거나 복사해 자신의 프로젝트 저장소 안에서 이 가이드를 사용한다. 로컬 사용에는 그것으로 충분하다. 일반 외부 사용자의 업스트림 경로는 **Issue** 다. 에이전트는 인증된 도구가 있고 사용자가 승인하면 업스트림 Issue를 생성하고, 그렇지 않으면 수동 등록용 Issue 초안을 준비한다.
+
+`ask_user` 도구가 구조화된 선택지를 지원하지 않으면 질문 본문에 번호 목록으로 제시한다. 최소 선택지는 다음과 같다.
+
+1. **사용만 / 업스트림 제안 안 함** — 개선을 현재 프로젝트의 `AGENTS.md`, `SPECS.md`, 프롬프트, 스킬 등 로컬 커스터마이징 파일에만 유지.
+2. **로컬 AUTHORING 사본 수정** — 현재 워크스페이스에 복사된 `AUTHORING.DIMOHY*.md` 사본만 수정하고 업스트림 요청은 준비하지 않음.
+3. **업스트림 Issue 생성** — 인증된 GitHub 도구 또는 브라우저 자동화가 있으면 <https://github.com/dimohy/AUTHORING.DIMOHY> 에 Issue 등록.
+4. **Issue 초안 준비** — 인증이나 브라우저 자동화가 없으면 사용자가 수동 등록할 Issue 제목/본문 생성.
+5. **건너뜀 / 나중에** — 사용자가 다시 요청할 때까지 기록하지 않음.
+
+규칙:
+
+- 사용자가 선택한 범위만 적용한다. 로컬 프로젝트 개선을 묵시적으로 AUTHORING 업스트림 변경으로 승격하지 않는다.
+- Issue 생성 시 사용 맥락, 문제/갭, 제안 개선, 왜 범용적으로 유용한지, 영향 영역, 선택적 제안 문구 또는 패치를 포함한다.
+- 사용자의 명시적 승인 없이 Issue를 자동 생성하지 않는다. 인증이 없으면 수동 등록용 Issue 초안을 준비한다.
+- 사용자의 명시적 승인과 인증 정보 없이 Issue 생성·댓글 작성·라벨 변경·Issue 닫기를 수행하지 않는다.
+- 이 정식 저장소에서는 maintainer가 `.github/prompts/triage-authoring-issues.prompt.md` 를 사용해 등록된 Issue를 읽고, 타당성과 범용성을 판단한 뒤 승인된 변경만 AUTHORING.DIMOHY에 반영할 수 있다.
 
 ## 10. 초기 로딩 요구사항
 
@@ -884,6 +907,7 @@ forbiddenTools: ["run_in_terminal", "replace_string_in_file"]
 | `정비해줘`, `재조정해줘`, `AUTHORING 기준으로 맞춰줘` | 기존 프로젝트 재조정 | §12 |
 | `# {정책내용}` (해시태그 접두) | 정책 확장 (AGENTS 또는 SPECS 라우팅) | §1.4, §5 |
 | `.github 감사`, `에이전트 점검` | 커스터마이징 문서 감사 | §12 |
+| `이 AUTHORING 개선을 업스트림에 제안해줘`, `GitHub에 요청해줘` | AUTHORING 업스트림 개선 선택 옵션 | §9.1 |
 | `품질 바 확인`, `릴리스 준비 체크` | 품질 게이트 점검 | §14 |
 | `AUTHORING 감사해줘`, `메타 가이드 점검`, `이 파일 하나로 충분해?` | AUTHORING 자가 검수 (10개 기준) | §17 |
 | (리비전 상승을 유발하는 에이전트 내부 행동) | 파일명·메타·참조 일괄 갱신 | §18 |
@@ -1045,10 +1069,11 @@ forbiddenTools: ["run_in_terminal", "replace_string_in_file"]
 ### 18.2 파일명 규약
 
 - 형식: `AUTHORING.DIMOHY.r{revision}.md`
-- 예: `ko/AUTHORING.DIMOHY.r27.md`, `en/AUTHORING.DIMOHY.r27.md`
+- 예: `ko/AUTHORING.DIMOHY.rNN.md`, `en/AUTHORING.DIMOHY.rNN.md`
 - 정식 저장소에서는 같은 리비전의 한국어/영어 파일을 각각 `ko/` 와 `en/` 아래에 둔다. 대상 프로젝트에 설치할 때는 필요한 언어 파일을 워크스페이스 루트로 복사해 사용할 수 있다.
 - **리비전 없는 `AUTHORING.DIMOHY.md` 파일명은 사용하지 않는다.** 구리비전 호환이 필요하면 별도의 리다이렉션 규칙(§18.5)을 적용한다.
 - 파일 상단 메타 테이블의 `리비전(Revision)` 값과 파일명의 `r{revision}` 값은 반드시 일치해야 한다.
+- README와 본문 참조에는 현재 리비전 번호를 가능한 한 쓰지 않는다. 현재 리비전 번호는 원칙적으로 언어별 AUTHORING 파일의 제목, 상단 메타 테이블, 리비전 파일명 자체, 리비전 히스토리 항목에만 둔다. 그 외에는 `ko/`, `en/` 같은 언어 디렉터리 링크 또는 `AUTHORING.DIMOHY.r*.md` 같은 일반 셀렉터를 사용한다.
 
 ### 18.3 단순 리비전 규칙
 
@@ -1064,11 +1089,13 @@ forbiddenTools: ["run_in_terminal", "replace_string_in_file"]
 1. 한국어와 영어 문서 메타 테이블의 `리비전(Revision)` 값 갱신.
 2. 한국어와 영어 문서 메타 테이블의 `최종 수정일` 갱신.
 3. **언어별 파일명 리네임**: `ko/AUTHORING.DIMOHY.r{기존}.md`·`en/AUTHORING.DIMOHY.r{기존}.md` → 같은 신규 리비전 파일명. Git 관리 프로젝트는 `git mv` 를 사용해 이력을 보존한다.
-4. **내부 참조 갱신**: `README.md`·`AGENTS.md`·`SPECS.md`·`.github/**/*.md`·`CLAUDE.md` 등에 존재하는 `AUTHORING.DIMOHY.r*.md` 링크를 신 파일명으로 일괄 교체. `grep_search` 로 누락을 검증.
-5. **README 동기화**: 루트 English-first `README.md`, 한국어 `ko/README.md`, SVG 설명 자산, 최신 리비전, 언어별 링크, 빠른 사용법, Git 태그 정보를 함께 갱신한다.
-6. **주요 변경 요약**: 리비전 상승의 이유를 1~3줄로 `ask_user` 보고에 포함.
-7. **구리비전 정책 수행**: §18.5 리다이렉션 규칙에 따라 구리비전 파일을 보존 또는 삭제. 삭제는 반드시 `ask_user` 확인.
-8. **정식 저장소 동기화**: 가능하면 같은 턴에서 `main` 브랜치와 `r{revision}` 태그를 <https://github.com/dimohy/AUTHORING.DIMOHY> 에 푸시한다. 인증·권한 문제로 실패하면 실패 이유와 수동 후속 절차를 보고한다.
+4. **내부 참조 갱신 최소화**: `README.md`·`AGENTS.md`·`SPECS.md`·`.github/**/*.md`·`CLAUDE.md` 는 구조나 문구가 실제로 바뀔 때만 갱신한다. 현재 리비전 번호 교체만을 위한 수정은 하지 않는다.
+5. **정확 리비전 참조 판별**: 특정 과거 리비전을 가리키는 참조는 보존하고, 최신 파일을 뜻하는 참조는 `AUTHORING.DIMOHY.r*.md` 또는 언어 디렉터리 링크로 일반화한다.
+6. **README 동기화**: 루트 English-first `README.md`, 한국어 `ko/README.md`, SVG 설명 자산, 언어별 링크, 빠른 사용법, Git 태그 정보를 구조 변경이 있을 때만 함께 갱신한다.
+7. **리비전 히스토리 갱신**: 영어·한국어 히스토리 문서를 같은 구조로 갱신하고 사용자에게 보이는 변경을 기록한다.
+8. **주요 변경 요약**: 리비전 상승의 이유를 1~3줄로 `ask_user` 보고에 포함.
+9. **구리비전 정책 수행**: §18.5 리다이렉션 규칙에 따라 구리비전 파일을 보존 또는 삭제. 삭제는 반드시 `ask_user` 확인.
+10. **정식 저장소 동기화**: 가능하면 같은 턴에서 `main` 브랜치와 `r{revision}` 태그를 <https://github.com/dimohy/AUTHORING.DIMOHY> 에 푸시한다. 인증·권한 문제로 실패하면 실패 이유와 수동 후속 절차를 보고한다.
 
 ### 18.5 구리비전 리다이렉션 규칙
 
@@ -1083,7 +1110,7 @@ forbiddenTools: ["run_in_terminal", "replace_string_in_file"]
 
 ### 18.7 기록 유지
 
-- 리비전 상승 이력은 **Git 커밋 메시지**와 선택적으로 `.planning/CHANGELOG.md` 에 기록한다. 리비전별 상세 내용을 본 가이드 내부에 누적하지 않는다(문서 비대화 방지).
+- 리비전 상승 이력은 영어·한국어 히스토리 문서에 같은 구조로 기록한다. 각 항목은 기능/개선/버그 수정 중심으로 사용자·maintainer가 얻는 가치를 설명하며, 리비전별 상세 내용을 본 가이드 내부에 누적하지 않는다(문서 비대화 방지).
 
 ---
 

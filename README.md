@@ -4,20 +4,19 @@ AUTHORING.DIMOHY is a meta authoring guide for building consistent AI-agent cust
 
 Canonical repository: <https://github.com/dimohy/AUTHORING.DIMOHY>
 
-> Korean guide: [`ko/README.md`](ko/README.md) · Korean source document: [`ko/AUTHORING.DIMOHY.r27.md`](ko/AUTHORING.DIMOHY.r27.md)
+> Korean guide: [`ko/README.md`](ko/README.md) · Korean source directory: [`ko/`](ko/)
 
 <p align="center">
    <img src="assets/authoring-workflow.svg" alt="AUTHORING.DIMOHY workflow overview" width="100%">
 </p>
 
-## Latest revision
+## Guide locations
 
-| Language | File |
+| Language | Location |
 |---|---|
-| English | [`en/AUTHORING.DIMOHY.r27.md`](en/AUTHORING.DIMOHY.r27.md) |
-| Korean | [`ko/AUTHORING.DIMOHY.r27.md`](ko/AUTHORING.DIMOHY.r27.md) |
+| English | [`en/`](en/) — use the newest `AUTHORING.DIMOHY.r*.md` file |
+| Korean | [`ko/`](ko/) — use the newest `AUTHORING.DIMOHY.r*.md` file |
 
-Current revision: **r27**  
 Last updated: **2026-04-28**
 
 ## When should agents read this guide?
@@ -35,20 +34,19 @@ During normal project work, the lightweight `AGENTS.md` in that project is the p
 
 ### 1. Install into a new project
 
-1. Copy the latest localized guide into the target project root, or reference it explicitly from this repository.
-   - English: `en/AUTHORING.DIMOHY.r27.md`
-   - Korean: `ko/AUTHORING.DIMOHY.r27.md`
-2. Ask your AI agent to bootstrap the project.
-   - English: `Read AUTHORING.DIMOHY.md and create AGENTS.md for this project`
-   - Korean: `# AUTHORING.DIMOHY.md를 읽고 이 프로젝트의 AGENTS.md를 생성해줘`
-3. The agent should create `AGENTS.md`, optionally create `SPECS.md`, and offer project-appropriate agents, prompts, skills, hooks, chat modes, and tool settings.
+1. To use AUTHORING, open the canonical repository on the web, choose the newest localized guide from `en/` or `ko/`, then copy/download it into the target project root or reference that web file explicitly.
+   - English: newest `en/AUTHORING.DIMOHY.r*.md`
+   - Korean: newest `ko/AUTHORING.DIMOHY.r*.md`
+2. In the target project, you may optionally keep the copied file as `AUTHORING.DIMOHY.md` for a stable local reference.
+3. Ask your AI agent to bootstrap the project.
+   - `Read AUTHORING.DIMOHY.md and create AGENTS.md for this project`
+4. The agent should create `AGENTS.md`, optionally create `SPECS.md`, and offer project-appropriate agents, prompts, skills, hooks, chat modes, and tool settings.
 
 ### 2. Run interactive bootstrap
 
 Use this when you want the agent to interview you before generating files:
 
 - `Run AUTHORING`
-- `AUTHORING 실행해줘`
 
 Interactive bootstrap runs four steps:
 
@@ -62,10 +60,27 @@ Interactive bootstrap runs four steps:
 Use this when a project already has `AGENTS.md`, `.github/`, `.claude/`, `.cursor/`, or similar customization files:
 
 - `realign this project with AUTHORING`
-- `정비해줘`
-- `AUTHORING 기준으로 맞춰줘`
 
 The agent should classify each asset as `keep / update / remove / missing`, present a change proposal, apply only approved changes, and re-audit afterward.
+
+### 4. Suggest useful improvements upstream
+
+If using AUTHORING in another project leads to a generally useful improvement, the upstream path is an Issue. External users submit reusable suggestions through Issues.
+
+Ask the agent in the target project:
+
+- `this AUTHORING improvement is useful upstream`
+- `create an AUTHORING improvement issue`
+
+The agent should let the user choose:
+
+1. **Use only / no upstream** — keep the improvement in the current project only.
+2. **Update local AUTHORING copy** — edit the copied `AUTHORING.DIMOHY*.md` in the current project only.
+3. **Create upstream Issue** — create an Issue in <https://github.com/dimohy/AUTHORING.DIMOHY> when authenticated GitHub tooling is available.
+4. **Prepare Issue draft** — generate the Issue title/body for manual submission when authentication or browser automation is unavailable.
+5. **Skip / later** — do nothing now.
+
+This repository includes `.github/ISSUE_TEMPLATE/authoring-improvement.yml` for structured Issue submissions. Maintainers can then use `.github/prompts/triage-authoring-issues.prompt.md` to read registered Issues, judge whether they are generally useful, and apply accepted changes to AUTHORING.DIMOHY.
 
 ## Managed categories
 
@@ -83,13 +98,14 @@ The agent should classify each asset as `keep / update / remove / missing`, pres
 
 ## TaskSync session-number fix
 
-Revision r27 includes explicit TaskSync safeguards:
+The current guide includes explicit TaskSync safeguards and the Issue-only upstream contribution flow:
 
 - reuse the injected or returned `session_id`;
 - do not resend `session_id: "auto"` during a normal conversation;
 - do not confuse UI labels such as `AGENT 1` or `AGENT 2` with `session_id`;
 - if the `ask_user` schema has no `options` field, write numbered choices in the question body;
-- preserve the exact `session_id` during summaries, handoffs, and compaction.
+- preserve the exact `session_id` during summaries, handoffs, and compaction;
+- when a reusable AUTHORING improvement is found, let the user choose local-only use, local AUTHORING copy update, upstream Issue creation, Issue draft preparation, or skip/later.
 
 ## Revision and localization policy
 
@@ -105,6 +121,10 @@ Whenever a revision changes, update all of the following together:
 - remote `main` branch
 
 A release is not complete if only one language is updated.
+
+Revision history is recorded in [`HISTORY.md`](HISTORY.md). Korean history is recorded in [`ko/HISTORY.md`](ko/HISTORY.md).
+
+To reduce revision-churn, user-facing docs should avoid hard-coding the current revision number. Outside the localized AUTHORING file title/metadata, the revisioned filename itself, and revision history entries, prefer language directory links such as `en/` and `ko/`, or generic selectors such as `AUTHORING.DIMOHY.r*.md`.
 
 ## License
 
