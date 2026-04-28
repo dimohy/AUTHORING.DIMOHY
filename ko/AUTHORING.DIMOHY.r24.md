@@ -1,9 +1,9 @@
-# AUTHORING.DIMOHY.r23.md — 에이전트 커스터마이징 문서 작성 가이드
+# AUTHORING.DIMOHY.r24.md — 에이전트 커스터마이징 문서 작성 가이드
 
 | 항목 | 값 |
 |---|---|
 | **저자(Author)** | DIMOHY |
-| **리비전(Revision)** | r23 |
+| **리비전(Revision)** | r24 |
 | **최종 수정일** | 2026-04-28 |
 | **라이선스** | Apache License 2.0 (본 문서 말미 [부록 A](#부록-a-license-apache-license-20) 참조) |
 | **정식 저장소** | <https://github.com/dimohy/AUTHORING.DIMOHY> — 본 문서의 권위 있는 배포·동기화 위치 |
@@ -1043,7 +1043,7 @@ forbiddenTools: ["run_in_terminal", "replace_string_in_file"]
 ### 18.2 파일명 규약
 
 - 형식: `AUTHORING.DIMOHY.r{revision}.md`
-- 예: `ko/AUTHORING.DIMOHY.r23.md`, `en/AUTHORING.DIMOHY.r23.md`
+- 예: `ko/AUTHORING.DIMOHY.r24.md`, `en/AUTHORING.DIMOHY.r24.md`
 - 정식 저장소에서는 같은 리비전의 한국어/영어 파일을 각각 `ko/` 와 `en/` 아래에 둔다. 대상 프로젝트에 설치할 때는 필요한 언어 파일을 워크스페이스 루트로 복사해 사용할 수 있다.
 - **리비전 없는 `AUTHORING.DIMOHY.md` 파일명은 사용하지 않는다.** 구리비전 호환이 필요하면 별도의 리다이렉션 규칙(§18.5)을 적용한다.
 - 파일 상단 메타 테이블의 `리비전(Revision)` 값과 파일명의 `r{revision}` 값은 반드시 일치해야 한다.

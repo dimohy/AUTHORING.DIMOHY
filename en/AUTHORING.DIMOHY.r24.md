@@ -1,9 +1,9 @@
-# AUTHORING.DIMOHY.r23.md — Agent Customization Authoring Guide
+# AUTHORING.DIMOHY.r24.md — Agent Customization Authoring Guide
 
 | Item | Value |
 |---|---|
 | **Author** | DIMOHY |
-| **Revision** | r23 |
+| **Revision** | r24 |
 | **Last updated** | 2026-04-28 |
 | **License** | Apache License 2.0 — see the repository [`LICENSE`](../LICENSE) file |
 | **Canonical repository** | <https://github.com/dimohy/AUTHORING.DIMOHY> |
