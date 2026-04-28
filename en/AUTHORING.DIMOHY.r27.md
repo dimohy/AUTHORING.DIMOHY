@@ -1,9 +1,9 @@
-# AUTHORING.DIMOHY.r26.md — Agent Customization Authoring Guide
+# AUTHORING.DIMOHY.r27.md — Agent Customization Authoring Guide
 
 | Item | Value |
 |---|---|
 | **Author** | DIMOHY |
-| **Revision** | r26 |
+| **Revision** | r27 |
 | **Last updated** | 2026-04-28 |
 | **License** | Apache License 2.0 — see the repository [`LICENSE`](../LICENSE) file |
 | **Canonical repository** | <https://github.com/dimohy/AUTHORING.DIMOHY> |
@@ -16,7 +16,7 @@
 - The repository stores localized editions under `ko/` and `en/`. Whenever authoring rules or behavior change, update both language files in the same revision.
 - The root `README.md` is the repository’s default entry point and must be **English-first**. Korean guidance lives in `ko/README.md`; the root README must link to both `ko/README.md` and the Korean guide (`ko/AUTHORING.DIMOHY.r{revision}.md`).
 - `README.md` and `ko/README.md` are user-facing entry points. Keep them friendly and current: latest revision, language links, copy/install steps, and tag information.
-- The root `README.md` should include the visual SVG overview (`assets/authoring-workflow.svg`) so readers can understand the workflow at a glance. `ko/README.md` may reuse the same SVG for visual consistency.
+- The root `README.md` should include the English visual SVG overview (`assets/authoring-workflow.svg`) so readers can understand the workflow at a glance. Korean `ko/README.md` should use the Korean SVG (`assets/authoring-workflow-ko.svg`) so each README’s visual text matches its language.
 - After updating the guide, sync the `main` branch and the revision tag (`r{revision}`) to the canonical repository whenever credentials allow it. If pushing fails, report the reason and the exact follow-up needed.
 - If Korean and English editions drift, treat it as a release-blocking defect. Fix both before declaring the revision complete.
 

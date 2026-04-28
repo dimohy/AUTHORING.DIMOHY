@@ -4,7 +4,7 @@ AUTHORING.DIMOHY is a meta authoring guide for building consistent AI-agent cust
 
 Canonical repository: <https://github.com/dimohy/AUTHORING.DIMOHY>
 
-> Korean guide: [`ko/README.md`](ko/README.md) · Korean source document: [`ko/AUTHORING.DIMOHY.r26.md`](ko/AUTHORING.DIMOHY.r26.md)
+> Korean guide: [`ko/README.md`](ko/README.md) · Korean source document: [`ko/AUTHORING.DIMOHY.r27.md`](ko/AUTHORING.DIMOHY.r27.md)
 
 <p align="center">
    <img src="assets/authoring-workflow.svg" alt="AUTHORING.DIMOHY workflow overview" width="100%">
@@ -14,10 +14,10 @@ Canonical repository: <https://github.com/dimohy/AUTHORING.DIMOHY>
 
 | Language | File |
 |---|---|
-| English | [`en/AUTHORING.DIMOHY.r26.md`](en/AUTHORING.DIMOHY.r26.md) |
-| Korean | [`ko/AUTHORING.DIMOHY.r26.md`](ko/AUTHORING.DIMOHY.r26.md) |
+| English | [`en/AUTHORING.DIMOHY.r27.md`](en/AUTHORING.DIMOHY.r27.md) |
+| Korean | [`ko/AUTHORING.DIMOHY.r27.md`](ko/AUTHORING.DIMOHY.r27.md) |
 
-Current revision: **r26**  
+Current revision: **r27**  
 Last updated: **2026-04-28**
 
 ## When should agents read this guide?
@@ -36,8 +36,8 @@ During normal project work, the lightweight `AGENTS.md` in that project is the p
 ### 1. Install into a new project
 
 1. Copy the latest localized guide into the target project root, or reference it explicitly from this repository.
-   - English: `en/AUTHORING.DIMOHY.r26.md`
-   - Korean: `ko/AUTHORING.DIMOHY.r26.md`
+   - English: `en/AUTHORING.DIMOHY.r27.md`
+   - Korean: `ko/AUTHORING.DIMOHY.r27.md`
 2. Ask your AI agent to bootstrap the project.
    - English: `Read AUTHORING.DIMOHY.md and create AGENTS.md for this project`
    - Korean: `# AUTHORING.DIMOHY.md를 읽고 이 프로젝트의 AGENTS.md를 생성해줘`
@@ -83,7 +83,7 @@ The agent should classify each asset as `keep / update / remove / missing`, pres
 
 ## TaskSync session-number fix
 
-Revision r26 includes explicit TaskSync safeguards:
+Revision r27 includes explicit TaskSync safeguards:
 
 - reuse the injected or returned `session_id`;
 - do not resend `session_id: "auto"` during a normal conversation;

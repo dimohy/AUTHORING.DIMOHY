@@ -5,20 +5,20 @@ AUTHORING.DIMOHY는 어떤 프로젝트든 AI 에이전트 커스터마이징 �
 정식 저장소: <https://github.com/dimohy/AUTHORING.DIMOHY>
 
 > 기본 README는 영어입니다: [`../README.md`](../README.md)  
-> 한국어 본문 문서: [`AUTHORING.DIMOHY.r26.md`](AUTHORING.DIMOHY.r26.md)
+> 한국어 본문 문서: [`AUTHORING.DIMOHY.r27.md`](AUTHORING.DIMOHY.r27.md)
 
 <p align="center">
-   <img src="../assets/authoring-workflow.svg" alt="AUTHORING.DIMOHY 워크플로우 개요" width="100%">
+   <img src="../assets/authoring-workflow-ko.svg" alt="AUTHORING.DIMOHY 워크플로우 개요" width="100%">
 </p>
 
 ## 최신 리비전
 
 | 언어 | 파일 |
 |---|---|
-| 한국어 | [`ko/AUTHORING.DIMOHY.r26.md`](AUTHORING.DIMOHY.r26.md) |
-| English | [`en/AUTHORING.DIMOHY.r26.md`](../en/AUTHORING.DIMOHY.r26.md) |
+| 한국어 | [`ko/AUTHORING.DIMOHY.r27.md`](AUTHORING.DIMOHY.r27.md) |
+| English | [`en/AUTHORING.DIMOHY.r27.md`](../en/AUTHORING.DIMOHY.r27.md) |
 
-현재 리비전: **r26**  
+현재 리비전: **r27**  
 최종 수정일: **2026-04-28**
 
 ## 언제 읽어야 하나요?
@@ -37,8 +37,8 @@ AUTHORING.DIMOHY는 어떤 프로젝트든 AI 에이전트 커스터마이징 �
 ### 1. 새 프로젝트에 설치
 
 1. 원하는 언어의 최신 파일을 대상 프로젝트 루트에 복사하거나, 이 저장소의 파일을 명시적으로 참조합니다.
-   - 한국어: `ko/AUTHORING.DIMOHY.r26.md`
-   - English: `en/AUTHORING.DIMOHY.r26.md`
+   - 한국어: `ko/AUTHORING.DIMOHY.r27.md`
+   - English: `en/AUTHORING.DIMOHY.r27.md`
 2. 대상 프로젝트의 AI 채팅에서 다음처럼 요청합니다.
    - `# AUTHORING.DIMOHY.md를 읽고 이 프로젝트의 AGENTS.md를 생성해줘`
    - `Read AUTHORING.DIMOHY.md and create AGENTS.md for this project`
@@ -84,7 +84,7 @@ AUTHORING.DIMOHY는 어떤 프로젝트든 AI 에이전트 커스터마이징 �
 
 ## TaskSync 세션 증가 문제 대응
 
-r26에는 TaskSync 환경의 흔한 오류를 막는 규칙이 포함되어 있습니다.
+r27에는 TaskSync 환경의 흔한 오류를 막는 규칙이 포함되어 있습니다.
 
 - `TaskSync Session ID: N`이 주입되면 그 값을 계속 재사용합니다.
 - 정상 대화 중 `session_id: "auto"`를 반복 전송하지 않습니다.

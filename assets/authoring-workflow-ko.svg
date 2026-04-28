@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="620" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
-  <title id="title">AUTHORING.DIMOHY workflow overview</title>
-  <desc id="desc">A visual overview showing the AUTHORING.DIMOHY guide flowing into project interview, customization assets, and quality gates.</desc>
+  <title id="title">AUTHORING.DIMOHY 워크플로우 개요</title>
+  <desc id="desc">AUTHORING.DIMOHY 가이드가 프로젝트 인터뷰, 커스터마이징 자산, 품질 게이트로 이어지는 흐름을 보여주는 시각 개요입니다.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f172a"/>
@@ -34,12 +34,12 @@
       <path d="M2,2 L12,7.5 L2,13 Z" fill="#93c5fd"/>
     </marker>
     <style>
-      .title { font: 800 42px/1.2 Inter, Segoe UI, Arial, sans-serif; fill: #f8fafc; letter-spacing: -0.03em; }
-      .subtitle { font: 500 18px/1.5 Inter, Segoe UI, Arial, sans-serif; fill: #cbd5e1; }
-      .eyebrow { font: 800 12px/1.2 Inter, Segoe UI, Arial, sans-serif; fill: #bae6fd; letter-spacing: 0.09em; }
-      .label { font: 800 21px/1.15 Inter, Segoe UI, Arial, sans-serif; fill: #f8fafc; }
-      .body { font: 500 14px/1.45 Inter, Segoe UI, Arial, sans-serif; fill: #dbeafe; }
-      .small { font: 700 12px/1.2 Inter, Segoe UI, Arial, sans-serif; fill: #e0f2fe; }
+      .title { font: 800 42px/1.2 Inter, "Malgun Gothic", "Apple SD Gothic Neo", Segoe UI, sans-serif; fill: #f8fafc; letter-spacing: -0.03em; }
+      .subtitle { font: 500 18px/1.5 Inter, "Malgun Gothic", "Apple SD Gothic Neo", Segoe UI, sans-serif; fill: #cbd5e1; }
+      .eyebrow { font: 800 12px/1.2 Inter, "Malgun Gothic", "Apple SD Gothic Neo", Segoe UI, sans-serif; fill: #bae6fd; letter-spacing: 0.08em; }
+      .label { font: 800 21px/1.15 Inter, "Malgun Gothic", "Apple SD Gothic Neo", Segoe UI, sans-serif; fill: #f8fafc; }
+      .body { font: 500 14px/1.45 Inter, "Malgun Gothic", "Apple SD Gothic Neo", Segoe UI, sans-serif; fill: #dbeafe; }
+      .small { font: 700 12px/1.2 Inter, "Malgun Gothic", "Apple SD Gothic Neo", Segoe UI, sans-serif; fill: #e0f2fe; }
       .iconStroke { stroke: #082f49; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
       .line { stroke: #93c5fd; stroke-width: 4; fill: none; marker-end: url(#arrow); opacity: 0.9; }
     </style>
@@ -52,7 +52,7 @@
   <path d="M64 503 C235 418 323 560 493 476 C645 401 706 478 836 418 C960 362 1030 393 1135 326" stroke="#67e8f9" stroke-width="2" opacity="0.18" fill="none"/>
 
   <text x="60" y="76" class="title">AUTHORING.DIMOHY</text>
-  <text x="60" y="112" class="subtitle">A meta guide for designing, generating, and auditing AI-agent customization workflows.</text>
+  <text x="60" y="112" class="subtitle">어떤 프로젝트든 AI 에이전트 워크플로우를 설계·생성·감사하는 메타 가이드입니다.</text>
 
   <g filter="url(#shadow)">
     <rect x="60" y="188" width="235" height="272" rx="28" fill="url(#panel)" stroke="#93c5fd" stroke-opacity="0.42"/>
@@ -60,10 +60,10 @@
     <path class="iconStroke" d="M157 236 H185 L202 253 V295 H157 Z"/>
     <path class="iconStroke" d="M185 236 V253 H202"/>
     <path class="iconStroke" d="M168 268 H190 M168 283 H190"/>
-    <text x="91" y="352" class="eyebrow">SOURCE GUIDE</text>
-    <text x="91" y="382" class="label">Authoring truth</text>
-    <text x="91" y="413" class="body">Localized guide files</text>
-    <text x="91" y="435" class="body">rNN revision names</text>
+    <text x="91" y="352" class="eyebrow">원본 가이드</text>
+    <text x="91" y="382" class="label">작성 기준</text>
+    <text x="91" y="413" class="body">한·영 본문 문서</text>
+    <text x="91" y="435" class="body">rNN 리비전과 Git 태그</text>
   </g>
 
   <g filter="url(#shadow)">
@@ -71,10 +71,10 @@
     <circle cx="460" cy="265" r="54" fill="url(#violet)"/>
     <path class="iconStroke" d="M427 247 H473 Q486 247 486 260 V273 Q486 286 473 286 H452 L435 300 V286 H427 Q414 286 414 273 V260 Q414 247 427 247 Z"/>
     <path class="iconStroke" d="M443 264 H459 M470 264 H471"/>
-    <text x="373" y="352" class="eyebrow">BOOTSTRAP</text>
-    <text x="373" y="382" class="label">Project interview</text>
-    <text x="373" y="413" class="body">Goals, audience, outputs</text>
-    <text x="373" y="435" class="body">Agents, tools, constraints</text>
+    <text x="373" y="352" class="eyebrow">부트스트랩</text>
+    <text x="373" y="382" class="label">프로젝트 인터뷰</text>
+    <text x="373" y="413" class="body">목적, 독자, 산출물</text>
+    <text x="373" y="435" class="body">에이전트, 도구, 제약</text>
   </g>
 
   <g filter="url(#shadow)">
@@ -84,10 +84,10 @@
     <rect x="736" y="256" width="52" height="36" rx="8" fill="none" class="iconStroke" opacity="0.72"/>
     <circle cx="781" cy="247" r="10" fill="none" class="iconStroke"/>
     <path class="iconStroke" d="M781 230 V223 M781 271 V264 M798 247 H805 M757 247 H764 M793 235 L798 230 M764 264 L769 259 M793 259 L798 264 M764 230 L769 235"/>
-    <text x="658" y="352" class="eyebrow">CUSTOMIZATION STACK</text>
-    <text x="658" y="382" class="label">Generated assets</text>
+    <text x="658" y="352" class="eyebrow">커스터마이징 스택</text>
+    <text x="658" y="382" class="label">생성 자산</text>
     <text x="658" y="413" class="body">AGENTS.md, SPECS.md</text>
-    <text x="658" y="435" class="body">Rules, prompts, skills, hooks</text>
+    <text x="658" y="435" class="body">규칙, 프롬프트, 스킬, 훅</text>
   </g>
 
   <g filter="url(#shadow)">
@@ -95,10 +95,10 @@
     <circle cx="1038" cy="265" r="54" fill="url(#amber)"/>
     <path class="iconStroke" d="M1038 228 L1073 243 V269 C1073 293 1055 309 1038 316 C1021 309 1003 293 1003 269 V243 Z"/>
     <path class="iconStroke" d="M1019 269 L1033 283 L1058 254"/>
-    <text x="965" y="352" class="eyebrow">QUALITY GATE</text>
-    <text x="965" y="382" class="label">Ship-ready</text>
-    <text x="965" y="413" class="body">TaskSync-safe sessions</text>
-    <text x="965" y="435" class="body">Tests, audits, docs sync</text>
+    <text x="965" y="352" class="eyebrow">품질 게이트</text>
+    <text x="965" y="382" class="label">배포 가능 상태</text>
+    <text x="965" y="413" class="body">TaskSync 세션 안전</text>
+    <text x="965" y="435" class="body">테스트, 감사, 문서 동기화</text>
   </g>
 
   <path d="M301 324 C320 324 322 324 337 324" class="line"/>
@@ -107,6 +107,6 @@
 
   <g filter="url(#shadow)">
     <rect x="260" y="510" width="680" height="54" rx="27" fill="#020617" opacity="0.45" stroke="#67e8f9" stroke-opacity="0.25"/>
-    <text x="306" y="544" class="small">Read the full guide only when authoring customizations; keep day-to-day project work lightweight.</text>
+    <text x="333" y="544" class="small">전체 가이드는 커스터마이징할 때만 읽고, 평소 프로젝트 작업은 가볍게 유지합니다.</text>
   </g>
 </svg>
