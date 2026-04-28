@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">AUTHORING.DIMOHY workflow overview</title>
+  <desc id="desc">A visual overview showing AUTHORING.DIMOHY guiding project bootstrap, customization assets, agent workflow, and quality gates.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="48%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#93c5fd"/>
+    </marker>
+    <style>
+      .title { font: 800 42px/1.2 Inter, Segoe UI, Arial, sans-serif; fill: #f8fafc; letter-spacing: -0.02em; }
+      .subtitle { font: 500 18px/1.5 Inter, Segoe UI, Arial, sans-serif; fill: #cbd5e1; }
+      .label { font: 800 18px/1.2 Inter, Segoe UI, Arial, sans-serif; fill: #f8fafc; }
+      .body { font: 500 13px/1.45 Inter, Segoe UI, Arial, sans-serif; fill: #dbeafe; }
+      .tiny { font: 700 12px/1.2 Inter, Segoe UI, Arial, sans-serif; fill: #bfdbfe; letter-spacing: 0.04em; }
+      .pill { font: 700 12px/1 Inter, Segoe UI, Arial, sans-serif; fill: #ecfeff; }
+      .muted { fill: #94a3b8; }
+      .line { stroke: #93c5fd; stroke-width: 3; fill: none; marker-end: url(#arrow); opacity: 0.95; }
+      .softline { stroke: #67e8f9; stroke-width: 2; fill: none; opacity: 0.35; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" rx="34" fill="url(#bg)"/>
+  <circle cx="105" cy="95" r="150" fill="#38bdf8" opacity="0.10"/>
+  <circle cx="1055" cy="410" r="190" fill="#34d399" opacity="0.10"/>
+  <circle cx="790" cy="95" r="120" fill="#a78bfa" opacity="0.10"/>
+
+  <text x="60" y="70" class="title">AUTHORING.DIMOHY</text>
+  <text x="60" y="105" class="subtitle">One guide to bootstrap, govern, and audit AI-agent workflows across any project.</text>
+  <rect x="60" y="132" width="278" height="28" rx="14" fill="url(#accent)" opacity="0.95"/>
+  <text x="78" y="151" class="pill">r26 · English-first README · Korean guide linked</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="205" width="220" height="165" rx="24" fill="url(#card)" stroke="#93c5fd" stroke-opacity="0.45"/>
+    <text x="86" y="240" class="tiny">SOURCE OF TRUTH</text>
+    <text x="86" y="270" class="label">AUTHORING guide</text>
+    <text x="86" y="300" class="body">ko/ and en/ editions</text>
+    <text x="86" y="322" class="body">revisioned as rNN</text>
+    <text x="86" y="344" class="body">synced to Git tags</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="355" y="185" width="235" height="205" rx="24" fill="url(#card)" stroke="#c4b5fd" stroke-opacity="0.50"/>
+    <text x="383" y="222" class="tiny">BOOTSTRAP</text>
+    <text x="383" y="252" class="label">Project interview</text>
+    <text x="383" y="282" class="body">purpose · audience · outputs</text>
+    <text x="383" y="304" class="body">pipeline · agents · tools</text>
+    <text x="383" y="326" class="body">SPECS details</text>
+    <rect x="383" y="346" width="146" height="26" rx="13" fill="#312e81" opacity="0.95"/>
+    <text x="399" y="364" class="pill">ask_user friendly</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="665" y="145" width="245" height="285" rx="24" fill="url(#card)" stroke="#5eead4" stroke-opacity="0.48"/>
+    <text x="694" y="182" class="tiny">GENERATED ASSETS</text>
+    <text x="694" y="212" class="label">Customization stack</text>
+    <text x="694" y="245" class="body">AGENTS.md · SPECS.md</text>
+    <text x="694" y="267" class="body">Rules / Instructions</text>
+    <text x="694" y="289" class="body">Prompts / Commands</text>
+    <text x="694" y="311" class="body">Skills · Hooks · Agents</text>
+    <text x="694" y="333" class="body">MCP / Tool settings</text>
+    <path d="M694 358 H878" class="softline"/>
+    <text x="694" y="385" class="body">TaskSync-safe session policy</text>
+    <text x="694" y="407" class="body">English README + Korean link</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="975" y="205" width="165" height="165" rx="24" fill="url(#card)" stroke="#86efac" stroke-opacity="0.50"/>
+    <text x="1000" y="240" class="tiny">QUALITY</text>
+    <text x="1000" y="270" class="label">Ship-ready</text>
+    <text x="1000" y="300" class="body">checklists</text>
+    <text x="1000" y="322" class="body">tests &amp; audits</text>
+    <text x="1000" y="344" class="body">docs consistency</text>
+  </g>
+
+  <path d="M285 288 C315 288 325 288 350 288" class="line"/>
+  <path d="M595 288 C625 288 635 288 660 288" class="line"/>
+  <path d="M915 288 C945 288 950 288 970 288" class="line"/>
+
+  <g opacity="0.96">
+    <rect x="390" y="448" width="420" height="38" rx="19" fill="#020617" opacity="0.40" stroke="#67e8f9" stroke-opacity="0.25"/>
+    <text x="420" y="472" class="body">Read only when authoring customizations — keep normal project work lightweight.</text>
+  </g>
+</svg>
