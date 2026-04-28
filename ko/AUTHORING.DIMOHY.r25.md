@@ -1,9 +1,9 @@
-# AUTHORING.DIMOHY.r24.md — 에이전트 커스터마이징 문서 작성 가이드
+# AUTHORING.DIMOHY.r25.md — 에이전트 커스터마이징 문서 작성 가이드
 
 | 항목 | 값 |
 |---|---|
 | **저자(Author)** | DIMOHY |
-| **리비전(Revision)** | r24 |
+| **리비전(Revision)** | r25 |
 | **최종 수정일** | 2026-04-28 |
 | **라이선스** | Apache License 2.0 (본 문서 말미 [부록 A](#부록-a-license-apache-license-20) 참조) |
 | **정식 저장소** | <https://github.com/dimohy/AUTHORING.DIMOHY> — 본 문서의 권위 있는 배포·동기화 위치 |
@@ -14,7 +14,8 @@
 
 - 본 문서의 정식 관리 위치는 <https://github.com/dimohy/AUTHORING.DIMOHY> 이다. 다른 프로젝트에 복사된 파일은 사용 편의를 위한 배포본이며, 원본 개정은 이 저장소에 동기화되어야 한다.
 - 저장소 구조는 `ko/`(한국어)와 `en/`(English) 두 언어 디렉터리를 사용한다. 리비전이 올라가거나 작성 규칙이 바뀌면 **두 언어 파일을 같은 리비전으로 동시에 갱신**한다.
-- `README.md` 는 사용자가 가장 먼저 읽는 안내서다. 부트스트랩 방법, 언어별 파일 선택, 대상 프로젝트에 복사하는 방법, 리비전/태그 확인 방법을 친절히 유지한다.
+- 루트 `README.md` 는 저장소 기본 안내서이므로 **English-first** 로 작성한다. 한국어 안내는 `ko/README.md` 에 두고, 루트 `README.md` 상단에서 `ko/README.md` 와 한국어 본문(`ko/AUTHORING.DIMOHY.r{revision}.md`)으로 이동할 수 있게 링크한다.
+- `README.md` 와 `ko/README.md` 는 사용자가 가장 먼저 읽는 안내서다. 부트스트랩 방법, 언어별 파일 선택, 대상 프로젝트에 복사하는 방법, 리비전/태그 확인 방법을 친절히 유지한다.
 - 문서 업데이트 후에는 가능하면 같은 턴에서 `main` 브랜치와 리비전 태그(`r{revision}`)를 정식 저장소에 푸시한다. 인증·권한 문제로 푸시할 수 없으면 실패 이유와 사용자가 실행할 후속 절차를 명확히 보고한다.
 - 리비전 상승 시에는 §18.4에 따라 한국어/영어 파일명·메타 테이블·README 링크·Git 태그를 모두 함께 갱신한다.
 
@@ -1043,7 +1044,7 @@ forbiddenTools: ["run_in_terminal", "replace_string_in_file"]
 ### 18.2 파일명 규약
 
 - 형식: `AUTHORING.DIMOHY.r{revision}.md`
-- 예: `ko/AUTHORING.DIMOHY.r24.md`, `en/AUTHORING.DIMOHY.r24.md`
+- 예: `ko/AUTHORING.DIMOHY.r25.md`, `en/AUTHORING.DIMOHY.r25.md`
 - 정식 저장소에서는 같은 리비전의 한국어/영어 파일을 각각 `ko/` 와 `en/` 아래에 둔다. 대상 프로젝트에 설치할 때는 필요한 언어 파일을 워크스페이스 루트로 복사해 사용할 수 있다.
 - **리비전 없는 `AUTHORING.DIMOHY.md` 파일명은 사용하지 않는다.** 구리비전 호환이 필요하면 별도의 리다이렉션 규칙(§18.5)을 적용한다.
 - 파일 상단 메타 테이블의 `리비전(Revision)` 값과 파일명의 `r{revision}` 값은 반드시 일치해야 한다.
@@ -1063,7 +1064,7 @@ forbiddenTools: ["run_in_terminal", "replace_string_in_file"]
 2. 한국어와 영어 문서 메타 테이블의 `최종 수정일` 갱신.
 3. **언어별 파일명 리네임**: `ko/AUTHORING.DIMOHY.r{기존}.md`·`en/AUTHORING.DIMOHY.r{기존}.md` → 같은 신규 리비전 파일명. Git 관리 프로젝트는 `git mv` 를 사용해 이력을 보존한다.
 4. **내부 참조 갱신**: `README.md`·`AGENTS.md`·`SPECS.md`·`.github/**/*.md`·`CLAUDE.md` 등에 존재하는 `AUTHORING.DIMOHY.r*.md` 링크를 신 파일명으로 일괄 교체. `grep_search` 로 누락을 검증.
-5. **README 동기화**: 최신 리비전, 언어별 링크, 빠른 사용법, Git 태그 정보를 함께 갱신한다.
+5. **README 동기화**: 루트 English-first `README.md`, 한국어 `ko/README.md`, 최신 리비전, 언어별 링크, 빠른 사용법, Git 태그 정보를 함께 갱신한다.
 6. **주요 변경 요약**: 리비전 상승의 이유를 1~3줄로 `ask_user` 보고에 포함.
 7. **구리비전 정책 수행**: §18.5 리다이렉션 규칙에 따라 구리비전 파일을 보존 또는 삭제. 삭제는 반드시 `ask_user` 확인.
 8. **정식 저장소 동기화**: 가능하면 같은 턴에서 `main` 브랜치와 `r{revision}` 태그를 <https://github.com/dimohy/AUTHORING.DIMOHY> 에 푸시한다. 인증·권한 문제로 실패하면 실패 이유와 수동 후속 절차를 보고한다.

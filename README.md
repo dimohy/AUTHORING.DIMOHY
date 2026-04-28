@@ -4,16 +4,16 @@ AUTHORING.DIMOHY is a meta authoring guide for building consistent AI-agent cust
 
 Canonical repository: <https://github.com/dimohy/AUTHORING.DIMOHY>
 
-> 한국어 안내와 원문은 [`ko/AUTHORING.DIMOHY.r24.md`](ko/AUTHORING.DIMOHY.r24.md)에서 볼 수 있습니다.
+> Korean guide: [`ko/README.md`](ko/README.md) · Korean source document: [`ko/AUTHORING.DIMOHY.r25.md`](ko/AUTHORING.DIMOHY.r25.md)
 
 ## Latest revision
 
 | Language | File |
 |---|---|
-| English | [`en/AUTHORING.DIMOHY.r24.md`](en/AUTHORING.DIMOHY.r24.md) |
-| Korean | [`ko/AUTHORING.DIMOHY.r24.md`](ko/AUTHORING.DIMOHY.r24.md) |
+| English | [`en/AUTHORING.DIMOHY.r25.md`](en/AUTHORING.DIMOHY.r25.md) |
+| Korean | [`ko/AUTHORING.DIMOHY.r25.md`](ko/AUTHORING.DIMOHY.r25.md) |
 
-Current revision: **r24**  
+Current revision: **r25**  
 Last updated: **2026-04-28**
 
 ## When should agents read this guide?
@@ -32,8 +32,8 @@ During normal project work, the lightweight `AGENTS.md` in that project is the p
 ### 1. Install into a new project
 
 1. Copy the latest localized guide into the target project root, or reference it explicitly from this repository.
-   - English: `en/AUTHORING.DIMOHY.r24.md`
-   - Korean: `ko/AUTHORING.DIMOHY.r24.md`
+   - English: `en/AUTHORING.DIMOHY.r25.md`
+   - Korean: `ko/AUTHORING.DIMOHY.r25.md`
 2. Ask your AI agent to bootstrap the project.
    - English: `Read AUTHORING.DIMOHY.md and create AGENTS.md for this project`
    - Korean: `# AUTHORING.DIMOHY.md를 읽고 이 프로젝트의 AGENTS.md를 생성해줘`
@@ -79,7 +79,7 @@ The agent should classify each asset as `keep / update / remove / missing`, pres
 
 ## TaskSync session-number fix
 
-Revision r24 includes explicit TaskSync safeguards:
+Revision r25 includes explicit TaskSync safeguards:
 
 - reuse the injected or returned `session_id`;
 - do not resend `session_id: "auto"` during a normal conversation;
@@ -96,6 +96,7 @@ Whenever a revision changes, update all of the following together:
 - `en/AUTHORING.DIMOHY.rNN.md`
 - `ko/AUTHORING.DIMOHY.rNN.md`
 - this `README.md`
+- `ko/README.md`
 - Git tag `rNN`
 - remote `main` branch
 

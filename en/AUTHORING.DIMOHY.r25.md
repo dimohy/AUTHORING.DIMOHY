@@ -1,9 +1,9 @@
-# AUTHORING.DIMOHY.r24.md — Agent Customization Authoring Guide
+# AUTHORING.DIMOHY.r25.md — Agent Customization Authoring Guide
 
 | Item | Value |
 |---|---|
 | **Author** | DIMOHY |
-| **Revision** | r24 |
+| **Revision** | r25 |
 | **Last updated** | 2026-04-28 |
 | **License** | Apache License 2.0 — see the repository [`LICENSE`](../LICENSE) file |
 | **Canonical repository** | <https://github.com/dimohy/AUTHORING.DIMOHY> |
@@ -14,7 +14,8 @@
 
 - The canonical source for this guide is <https://github.com/dimohy/AUTHORING.DIMOHY>.
 - The repository stores localized editions under `ko/` and `en/`. Whenever authoring rules or behavior change, update both language files in the same revision.
-- `README.md` is the entry point for users. Keep it friendly and current: latest revision, language links, copy/install steps, and tag information.
+- The root `README.md` is the repository’s default entry point and must be **English-first**. Korean guidance lives in `ko/README.md`; the root README must link to both `ko/README.md` and the Korean guide (`ko/AUTHORING.DIMOHY.r{revision}.md`).
+- `README.md` and `ko/README.md` are user-facing entry points. Keep them friendly and current: latest revision, language links, copy/install steps, and tag information.
 - After updating the guide, sync the `main` branch and the revision tag (`r{revision}`) to the canonical repository whenever credentials allow it. If pushing fails, report the reason and the exact follow-up needed.
 - If Korean and English editions drift, treat it as a release-blocking defect. Fix both before declaring the revision complete.
 
@@ -379,7 +380,7 @@ External facts about tools, API signatures, paths, command names, and versions s
 - On every revision bump:
   1. Update both metadata tables.
   2. Rename both localized files.
-  3. Update README links.
+  3. Update the English-first root `README.md`, Korean `ko/README.md`, and all README links.
   4. Update internal references.
   5. Commit and tag `r{revision}`.
   6. Push `main` and the tag to <https://github.com/dimohy/AUTHORING.DIMOHY> when credentials allow it.
